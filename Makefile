@@ -1,9 +1,6 @@
 all:
 	@sudo mkdir -p /home/chanwopa/data/wordpress
 	@sudo mkdir -p /home/chanwopa/data/mariadb
-	@docker build -t mariadb:custom ./srcs/requirements/mariadb/
-	@docker build -t wordpress:custom ./srcs/requirements/wordpress/
-	@docker build -t nginx:custom ./srcs/requirements/nginx/
 	@docker-compose -f ./srcs/docker-compose.yml up
 
 down:
